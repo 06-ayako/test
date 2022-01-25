@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TEST input-mic</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!--クリックしてスタート-->
+    <div id="click-start">
+        <p class="font1">CLICK TO START</p>
+    </div>
+
+    <header class="page-header">
+        <!--オーディオ選択-->
+        <div class="block">
+            <input type="file" id="file-upload-audio" accept="audio/*" />
+            <label for="file-upload-audio" class="file-upload-audio">SELECT AUDIO FILE</label>
+            <p id="progress-file-upload-audio" class="span-font"></p>
+        </div>
+
+        <!--フィルター選択-->
+        <div class="block"> 
+            <input id="toggle-effect" type="checkbox" />
+            <label for="toggle-effect" class="label-effect"></label>
+            <span class="span-font">Filter</span>
+        </div>
+    </header>
+
+    <div class="invisible">
+        <dl>
+            <dt><label for="range-volume">VOLUME : <span id="output-volume">1</span></label></dt>
+            <dd><input type="range" id="range-volume" value="1" min="0" max="1" step="0.05" /></dd>
+            <dt><label for="range-playback-rate">PLAYBACK RATE : <span id="output-playback-rate">1</span></label></dt>
+            <dd><input type="range" id="range-playback-rate" value="1" min="0.05" max="2" step="0.05" /></dd>
+            <dt><label><input id="toggle-loop" type="checkbox" /> LOOP</label></dt>
+            
+            <dt><label for="button-filter-low">Low : <span id="output-filter-low">0</span>dB</label></dt>
+            <dd><input type="button" id="button-filter-low" class="button2" value="Connect Microphone" /></dd>
+
+            <dt><label for="button-filter-middle">Middle : <span id="output-filter-middle">0</span>dB</label>
+            </dt>
+            <dd><input type="button" id="button-filter-middle" class="button2" value="Connect Microphone" />
+            </dd>
+
+            <dt><label for="button-filter-high">High : <span id="output-filter-high">0</span>dB</label></dt>
+            <dd><input type="button" id="button-filter-high" class="button2" value="Connect Microphone" /></dd>
+
+        </dl>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
